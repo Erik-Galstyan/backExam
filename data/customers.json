@@ -1,0 +1,26 @@
+[
+  {
+    "id": "C001",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "123-456-7890"
+  },
+  {
+    "id": "C002",
+    "name": "Alice Doe",
+    "email": "Alice@example.com",
+    "phone": "456-476-7890"
+  },
+  {
+    "id": "C003",
+    "name": "Mark Doe",
+    "email": "Mark@example.com",
+    "phone": "999-456-7890"
+  },
+  {
+    "id": "C004",
+    "name": "Maxs Doe",
+    "email": "Max@example.com",
+    "phone": "888-456-7890"
+  }
+]
