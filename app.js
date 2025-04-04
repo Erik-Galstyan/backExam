@@ -1,7 +1,8 @@
-const experss = require("express");
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
+const experss = require("express");
 require("dotenv").config();
+
 
 const PORT = process.env.PORT || 3000;
 const pathToCustomers = path.join(__dirname, "./data/customers.json"); 
@@ -41,13 +42,13 @@ function createCustomers() {
 createCustomers();
 
 const accountRoutes = require("./routes/accountRoutes.js");
-const transactionRoutes = require("./routes/transactionRoutes.js");
 const customerRoutes = require("./routes/customerRoutes.js");
+const transactionRoutes = require("./routes/transactionRoutes.js");
 app.use(experss.json());
 
 app.use("/accounts", accountRoutes);
 app.use("/customers", customerRoutes);
-app.use("/transactions", customerRoutes);
+app.use("/transactions", transactionRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);

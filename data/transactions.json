@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": 1743615729213,
+    "accountId": 1743611684275,
+    "amount": 200,
+    "transactionType": "deposit",
+    "date": "2025-04-02T17:42:09.213Z"
+  },
+  {
+    "id": 1743615852555,
+    "accountId": 1743611684275,
+    "amount": 200,
+    "transactionType": "deposit",
+    "date": "2025-04-02T17:44:12.555Z"
+  },
+  {
+    "id": 1743670876901,
+    "accountId": 1743611684275,
+    "amount": 200,
+    "transactionType": "deposit",
+    "date": "2025-04-03T09:01:16.901Z"
+  },
+  {
+    "id": 1743671354273,
+    "accountId": 1743611684275,
+    "amount": 200,
+    "transactionType": "deposit",
+    "date": "2025-04-03T09:09:14.273Z"
+  },
+  {
+    "id": 1743671371529,
+    "accountId": 1743611684275,
+    "amount": 200,
+    "transactionType": "deposit",
+    "date": "2025-04-03T09:09:31.529Z"
+  }
+]

@@ -10,6 +10,8 @@ const { GetCustomerTransactions } = require(pathToCustomersController);
 
 const router = experss.Router();
 
-router.get("/:id/transactions", (req, res) => customerOrdersGet(req, res));
+router.get("/:id/transactions", (req, res) =>
+  GetCustomerTransactions(req, res)
+);
 
 module.exports = router;

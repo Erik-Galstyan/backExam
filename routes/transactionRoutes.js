@@ -10,6 +10,6 @@ const { postTransaction } = require(pathToTransactionsController);
 
 const router = experss.Router();
 
-router.post("/:id/transactions", (req, res) => postTransaction(req, res));
+router.post("/transfer", (req, res) => postTransaction(req, res));
 
 module.exports = router;

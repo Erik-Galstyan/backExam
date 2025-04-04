@@ -1,18 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const pathToCustomers = path.join(__dirname, "../data/customers.json");
+const pathToAccounts = path.join(__dirname, "../data/accounts.json");
 const pathToTransactions = path.join(__dirname, "../data/transactions.json");
 
 class customerController {
   constructor() {
     this.GetCustomerTransactions = (req, res) => {
       try {
-        const customers = JSON.parse(
-          fs.readFileSync(pathToCustomers, "utf-8"),
-          null,
-          2
-        );
 
         const transactions = JSON.parse(
           fs.readFileSync(pathToTransactions, "utf-8"),
@@ -20,11 +15,19 @@ class customerController {
           2
         );
 
-        const { id: customerId } = req.params;        
-        const found = customers.find((elm) => elm.id == customerId);
-        
+        const accounts = JSON.parse(
+          fs.readFileSync(pathToAccounts, "utf-8"),
+          null,
+          2
+        );
+
+        const { id: accountId } = req.params;
+        const found = accounts.find((elm) => elm.id == accountId);
+
         if (found) {
-          const foundingTransactions = transactions.filter(elm => elm.accountId == customerId);
+          const foundingTransactions = transactions.filter(
+            (elm) => elm.accountId == accountId
+          );
           res.status(200).json(foundingTransactions);
         } else {
           res.status(400).send("not found");
